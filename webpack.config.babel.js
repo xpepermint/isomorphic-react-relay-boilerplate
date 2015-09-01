@@ -9,7 +9,7 @@ const baseUrl = env.npm_package_config_webpackBaseUrl;
 
 let config = {
   entry: {
-    app: path.resolve('app/index.js')
+    app: path.resolve('app/client.js')
   },
   output: {
     path: path.resolve(`${buildPath}/${version}`),
