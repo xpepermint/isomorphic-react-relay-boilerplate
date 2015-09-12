@@ -2,6 +2,10 @@ import './styles/index.styl';
 
 import React from 'react';
 import ReactDom from 'react-dom';
-import App from './components/App';
+import Router from 'react-router';
+import createHistory from 'history/lib/createHistory'
+import routes from './routes';
 
-ReactDom.render(<App/>, document.getElementById('app'));
+let history = createHistory();
+
+React.render(<Router history={history}>{routes}</Router>, document.getElementById('app'))
