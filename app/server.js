@@ -3,6 +3,7 @@ import express from 'express';
 import React from 'react';
 import {renderToString} from 'react-dom/server';
 import createLocation from 'history/lib/createLocation';
+import Helmet from 'react-helmet';
 import {RoutingContext, match} from 'react-router';
 import routes from './routes';
 
@@ -24,10 +25,14 @@ app.use((req, res, next) => {
     if (renderProps == null) return next(error);
 
     let markup = renderToString(<RoutingContext {...renderProps}/>);
+    let helmet = Helmet.rewind();
     let html = [
       `<!DOCTYPE html>`,
       `<html>`,
         `<head>`,
+          `<title>${helmet.title}</title>`,
+          helmet.meta,
+          helmet.link,
           `<meta charset="utf-8"/>`,
           `<link rel="stylesheet" href="${assetsPath}/app.css"></link>`,
         `</head>`,
