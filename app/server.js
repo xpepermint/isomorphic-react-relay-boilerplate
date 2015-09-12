@@ -1,7 +1,7 @@
 import path from 'path';
 import express from 'express';
 import React from 'react';
-import ReactDomServer from 'react-dom/server';
+import {renderToString} from 'react-dom/server';
 import App from './components/App';
 
 const env = process.env;
@@ -14,7 +14,7 @@ app.set('x-powered-by', false);
 app.use(express.static(publicPath));
 
 app.use((req, res) => {
-  let markup = ReactDomServer.renderToString(<App/>);
+  let markup = renderToString(<App/>);
   let html = [
     `<!DOCTYPE html>`,
     `<html>`,
