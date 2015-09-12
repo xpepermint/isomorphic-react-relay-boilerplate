@@ -22,8 +22,8 @@
     "babel": "^5.8.23",
     "babel-runtime": "^5.8.20",
     "express": "^4.13.3",
-    "react": "^0.14.0-beta3",
-    "react-dom": "^0.14.0-beta3"
+    "react": "^0.14.0-rc1",
+    "react-dom": "^0.14.0-rc1"
   },
   "devDependencies": {
     "babel-core": "^5.8.23",
