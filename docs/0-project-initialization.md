@@ -1,3 +1,5 @@
+# Project Initialization
+
 We start a node project by creating and initializing a directory.
 
 ```

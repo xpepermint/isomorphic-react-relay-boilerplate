@@ -1,3 +1,5 @@
+# React Setup
+
 The instructions below explain how to setup an isomorphic React application. We'll need two entry points - one for server-side and one for client-side. The **server-side** entry point will be the `app/server.js` file while the **client-side** entry file will be `app/client.js`. Let's start by installing the dependencies.
 
 ```

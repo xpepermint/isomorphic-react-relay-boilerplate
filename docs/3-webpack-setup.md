@@ -1,4 +1,6 @@
-Let's start by installing the dependencies.
+# Webpack Setup
+
+We'll use [Webpack](http://webpack.github.io) bundler for serving client-side assets (e.g. javascript, styles) in development and for precompiling assets for production. Let's start by installing the dependencies.
 
 ```
 npm i --save-dev webpack webpack-dev-server extract-text-webpack-plugin babel-loader css-loader react-hot-loader style-loader stylus-loader nib

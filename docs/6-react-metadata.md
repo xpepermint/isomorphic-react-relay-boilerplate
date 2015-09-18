@@ -1,3 +1,5 @@
+# React Metadata
+
 React does not handle the page title and meta tags. We will use the power of the [react-helmet](https://github.com/nfl/react-helmet) package.
 
 Start by installing the dependencies.

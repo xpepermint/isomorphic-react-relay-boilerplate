@@ -1,3 +1,5 @@
+# Project Configuration
+
 Place all the configuration variables inside the [package.json](https://docs.npmjs.com/misc/scripts) thus, when running the node script using the `npm run` command, all the keys will be available as `process.env.npm_package_{key}`.
 
 ```json

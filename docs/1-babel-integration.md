@@ -1,3 +1,5 @@
+# Babel Integration
+
 Use the `babel` package for enabling ES6+ support. Start by installing the dependencies.
 
 ```
