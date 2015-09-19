@@ -3,9 +3,9 @@
 [Relay]() is a library for React.
 
 GraphQL:
-https://github.com/graphql/graphql-js/tree/master/src
 https://github.com/facebook/relay/issues/180
 https://medium.com/@frikille/moving-from-rest-to-graphql-e3650b6f5247
+https://medium.com/@HurricaneJames/graphql-mutations-fb3ad5ae73c4
 
 Relay:
 https://github.com/graphql/graphql-relay-js

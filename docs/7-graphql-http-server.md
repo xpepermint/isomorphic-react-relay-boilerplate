@@ -1,9 +1,9 @@
 # GraphQL HTTP Server
 
-[GraphQL](http://facebook.github.io/graphql/) is a language used to query application servers for data. The easies way to create a GraphQL HTTP server is to use the [express-graphql](https://github.com/graphql/express-graphql) middleware. Let's install the dependencies.
+[GraphQL](http://graphql.org) is a language used to query application servers for data. The easies way to create a GraphQL HTTP server is to use the [express-graphql](https://github.com/graphql/express-graphql) middleware. Let's install the dependencies.
 
 ```
-npm install --save express-graphql
+npm i --save express-graphql
 ```
 
 Next, we need to define a `schema` which describes our API's data model - data structure, available fields, associations, how we run queries and mutations. The following example explains how to `query` for a list of `projects`. Check the    [graphql-nested-schema-example](https://gist.github.com/xpepermint/7376b8c67caa926e19d2) gist for more advanced schema. Create a `graphql/schema.js` file and paste the code below.
@@ -25,7 +25,7 @@ const ProjectType = new GraphQLObjectType({
   }
 });
 
-const RootType = new GraphQLObjectType({
+const RootType = new GraphQLObjectType({ // fields on the root type are your public API
   name: 'RootType',
   fields: {
     projects: {
@@ -78,8 +78,4 @@ router.use('/*', app);
 export default router.listen(port, host);
 ```
 
-Start the server with the `npm run server:start:dev` command and run a test query.
-
-```
-curl -XPOST -H "Content-Type:application/graphql"  -d 'query RootQuery {projects {id, name}}' http://localhost:4444/graphql
-```
+Start the server with the `npm run server:start:dev` command and navigate to `http://localhost:4444/graphql?query={projects{name}}` to see the response.

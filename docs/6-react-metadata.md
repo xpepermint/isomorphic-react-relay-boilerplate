@@ -5,7 +5,7 @@ React does not handle the page title and meta tags. We will use the power of the
 Start by installing the dependencies.
 
 ```
-npm install --save react-helmet
+npm i --save react-helmet
 ```
 
 Put the `<Helmet/>` tag inside components.
