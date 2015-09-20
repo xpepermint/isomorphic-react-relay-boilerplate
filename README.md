@@ -2,7 +2,7 @@
 
 **Work in progress!**
 
-This project is more like a `tutorial` on how to quickly build an isomorphic app based on [Node](https://nodejs.org/en/), Facebook's [React](https://facebook.github.io/react/), [Relay](https://facebook.github.io/relay/) and [GraphQL](http://graphql.org/). In Node.js we are used to split complex all-in-one applications into several smaller ones. Thus our code is easier to read, easier to maintain and projects become long-term sustainable.
+This project is more like a `tutorial` on how to quickly build an isomorphic app based on [Node](https://nodejs.org/en/), Facebook's [React](https://facebook.github.io/react/), [React Router](https://github.com/rackt/react-router), [Relay](https://facebook.github.io/relay/) and [GraphQL](http://graphql.org/). In Node.js we are used to split complex all-in-one applications into several smaller ones. Thus our code is easier to read, easier to maintain and projects become long-term sustainable.
 
 Every implementation step of this boilerplate is documented under the `docs` directory so you can build everything from scratch.
 
