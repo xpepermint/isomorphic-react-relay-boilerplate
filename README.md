@@ -9,6 +9,6 @@ Every implementation step of this boilerplate is documented under the `docs` dir
 # Start
 
 1. Follow the [implementation steps](docs) or just clone this repository.
-2. Start HTTP server: `app:server:start:dev`.
-3. Start Webpack server: `app:webpack:start`.
+2. Start application HTTP server: `npm run app:server:start:dev`.
+3. Start application Webpack server: `npm run app:webpack:start`.
 4. Navigate to `http://localhost:4444`.
