@@ -55,7 +55,7 @@ import graphQLHTTP from 'express-graphql';
 import schema from './schema';
 
 let app = express();
-app.use('/', graphQLHTTP({schema, pretty: true}));
+app.use(graphQLHTTP({schema, pretty: true}));
 
 export default app;
 ```
