@@ -61,7 +61,7 @@ import ReactDomServer from 'react-dom/server';
 import App from './components/App';
 
 const env = process.env;
-const assetsPath = `${env.npm_package_config_webpackBaseUrl}/${env.npm_package_version}`;
+const assetsPath = `${env.npm_package_config_appWebpackBaseUrl}/${env.npm_package_version}`;
 const publicPath = path.resolve('../public');
 
 let app = express();
@@ -97,8 +97,8 @@ Create a server script `scripts/server.js` that will start the server.
 import app from '../app/server';
 
 const env = process.env;
-const host = env.npm_package_config_serverHost;
-const port = env.npm_package_config_serverPort;
+const host = env.npm_package_config_appServerHost;
+const port = env.npm_package_config_appServerPort;
 
 let server = app.listen(port, host);
 
@@ -110,12 +110,12 @@ Update the `package.json` by updating the config and scripts sections.
 ```json
 "config": {
   ...
-  "serverHost": "127.0.0.1",
-  "serverPort": 4444
+  "appServerHost": "127.0.0.1",
+  "appServerPort": 4444
 },
 "scripts": {
   ...
-  "server:start": "babel-node scripts/server.js",
-  "server:start:dev": "nodemon --exec babel-node -- scripts/server.js"
+  "app:server:start": "babel-node scripts/server.js",
+  "app:server:start:dev": "nodemon --exec babel-node -- scripts/server.js"
 },
 ```

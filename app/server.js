@@ -8,7 +8,7 @@ import {RoutingContext, match} from 'react-router';
 import routes from './routes';
 
 const env = process.env;
-const assetsPath = `${env.npm_package_config_webpackBaseUrl}/${env.npm_package_version}`;
+const assetsPath = `${env.npm_package_config_appWebpackBaseUrl}/${env.npm_package_version}`;
 const publicPath = path.resolve('../public');
 
 let app = express();

@@ -15,8 +15,8 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const env = process.env;
 const version = env.npm_package_version;
-const buildPath = env.npm_package_config_webpackBuildPath;
-const baseUrl = env.npm_package_config_webpackBaseUrl;
+const buildPath = env.npm_package_config_appWebpackBuildPath;
+const baseUrl = env.npm_package_config_appWebpackBaseUrl;
 
 let config = {
   entry: {
@@ -65,13 +65,13 @@ Open `package.json` and set scripts and config keys.
 ```json
 "config": {
   ...
-  "webpackBaseUrl": "http://localhost:8080",
-  "webpackBuildPath": "public/assets"
+  "appWebpackBaseUrl": "http://localhost:8080",
+  "appWebpackBuildPath": "public/assets"
 },
 "scripts": {
   ...
-  "webpack:start": "webpack-dev-server --hot --inline --progress --colors",
-  "webpack:build": "webpack -p"
+  "app:webpack:start": "webpack-dev-server --hot --inline --progress --colors",
+  "app:webpack:build": "webpack -p"
 },
 ```
 
@@ -81,4 +81,4 @@ The build command will create precompiled files which we don't want to store int
 echo public/assets >> .gitignore
 ```
 
-This configuration will produce the files `app.js` and `app.css`. You can run the development webpack server with the `npm run webpack:start` command and then access these files from `http://localhost:8080/{version}/app.{extension}`. To precompile assets for production, run the `npm run webpack:build` command.
+This configuration will produce the files `app.js` and `app.css`. You can run the development webpack server with the `npm run app:webpack:start` command and then access these files from `http://localhost:8080/{version}/app.{extension}`. To precompile assets for production, run the `npm run app:webpack:build` command.

@@ -4,8 +4,8 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const env = process.env;
 const version = env.npm_package_version;
-const buildPath = env.npm_package_config_webpackBuildPath;
-const baseUrl = env.npm_package_config_webpackBaseUrl;
+const buildPath = env.npm_package_config_appWebpackBuildPath;
+const baseUrl = env.npm_package_config_appWebpackBaseUrl;
 
 let config = {
   entry: {

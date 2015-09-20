@@ -68,8 +68,8 @@ import app from '../app/server';
 import graphQL from '../graphql';
 
 const env = process.env;
-const host = env.npm_package_config_serverHost;
-const port = env.npm_package_config_serverPort;
+const host = env.npm_package_config_appServerHost;
+const port = env.npm_package_config_appServerPort;
 
 let router = express();
 router.use('/graphql', graphQL);
@@ -78,4 +78,4 @@ router.use('/*', app);
 export default router.listen(port, host);
 ```
 
-Start the server with the `npm run server:start:dev` command and navigate to `http://localhost:4444/graphql?query={projects{name}}` to see the response.
+Start the server with the `npm run app:server:start:dev` command and navigate to `http://localhost:4444/graphql?query={projects{name}}` to see the response.

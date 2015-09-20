@@ -4,16 +4,16 @@
   "description": "",
   "main": "index.js",
   "config": {
-    "webpackBaseUrl": "http://localhost:8080",
-    "webpackBuildPath": "public/assets",
-    "serverHost": "127.0.0.1",
-    "serverPort": 4444
+    "appWebpackBaseUrl": "http://localhost:8080",
+    "appWebpackBuildPath": "public/assets",
+    "appServerHost": "127.0.0.1",
+    "appServerPort": 4444
   },
   "scripts": {
-    "webpack:start": "webpack-dev-server --hot --inline --progress --colors",
-    "webpack:build": "webpack -p",
-    "server:start": "babel-node scripts/server.js",
-    "server:start:dev": "nodemon --exec babel-node -- scripts/server.js",
+    "app:webpack:start": "webpack-dev-server --hot --inline --progress --colors",
+    "app:webpack:build": "webpack -p",
+    "app:server:start": "babel-node scripts/server.js",
+    "app:server:start:dev": "nodemon --exec babel-node -- scripts/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
