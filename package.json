@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "config": {
+    "storageDatabaseUri": "mysql://user:password@localhost:3306/dbname",
     "appWebpackBaseUrl": "http://localhost:8080",
     "appWebpackBuildPath": "public/assets",
     "appServerHost": "127.0.0.1",
@@ -14,6 +15,9 @@
     "app:webpack:build": "webpack -p",
     "app:server:start": "babel-node scripts/server.js",
     "app:server:start:dev": "nodemon --exec babel-node -- scripts/server.js",
+    "storage:db:migrate": "sequelize db:migrate --url $npm_package_config_storageDatabaseUri --models-path ./storage/models --migrations-path ./storage/migrations",
+    "storage:db:rollback": "sequelize db:migrate:undo --url $npm_package_config_storageDatabaseUri --models-path ./storage/models --migrations-path ./storage/migrations",
+    "storage:db:seed": "babel-node ./storage/seed.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -23,11 +27,15 @@
     "babel-runtime": "^5.8.20",
     "express": "^4.13.3",
     "express-graphql": "^0.3.0",
+    "graphql-sequelize": "^0.8.3",
     "history": "^1.9.0",
+    "mysql": "^2.9.0",
     "react": "^0.14.0-rc1",
     "react-dom": "^0.14.0-rc1",
     "react-helmet": "^1.1.3",
-    "react-router": "^1.0.0-rc1"
+    "react-router": "^1.0.0-rc1",
+    "sequelize": "^3.9.0",
+    "sequelize-cli": "git+https://github.com/xpepermint/cli.git"
   },
   "devDependencies": {
     "babel-core": "^5.8.23",

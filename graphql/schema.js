@@ -5,6 +5,8 @@ import {
   GraphQLInt,
   GraphQLList
 } from 'graphql/type';
+import {resolver} from 'graphql-sequelize';
+import Project from '../storage/models/Project';
 
 const ProjectType = new GraphQLObjectType({
   name: 'ProjectType',
@@ -19,12 +21,7 @@ const RootType = new GraphQLObjectType({
   fields: {
     projects: {
       type: new GraphQLList(ProjectType),
-      resolve() { // you'll replace this with a promise from a database
-        return [
-          {id: 1, name: `Project 1`},
-          {id: 2, name: `Project 2`}
-        ];
-      }
+      resolve: resolver(Project)
     }
   }
 });
