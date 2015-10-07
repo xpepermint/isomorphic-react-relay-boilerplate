@@ -17,7 +17,7 @@ app.set('x-powered-by', false);
 app.use(express.static(publicPath));
 
 app.use((req, res, next) => {
-  let location = createLocation(req.url);
+  let location = createLocation(req.originalUrl);
 
   match({routes, location}, (error, redirectLocation, renderProps) => {
     if (redirectLocation) return res.redirect(redirectLocation.pathname);
