@@ -95,7 +95,7 @@ import routes from './routes';
 ...
 
 app.use((req, res, next) => {
-  let location = createLocation(req.url);
+  let location = createLocation(req.originalUrl);
 
   match({routes, location}, (error, redirectLocation, renderProps) => {
     if (redirectLocation) return res.redirect(redirectLocation.pathname);
