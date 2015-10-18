@@ -8,7 +8,7 @@ npm i --save react@^0.14.0-beta3 react-dom@^0.14.0-beta3
 
 ## Client
 
-We've already configured the Webpack so let's just rename the `app/index.js` file to `app/config.js`. We must also update the configuration so it will point to the right entry file.
+We've already configured the Webpack so let's just rename the `app/index.js` file to `app/client.js`. We must also update the configuration so it will point to the right entry file.
 
 ```js
 entry: {
@@ -44,7 +44,7 @@ export default App;
 
 ## Server
 
-We need a server which will render the app on the server and serve the html content. We'll use [Express](http://expressjs.com) for that. We'll also use [nodemon](http://nodemon.io/) for starting the server in development. Continue by installing the dependencies.
+We need a server, which will do the same thing that the client does, but server-side, thus creating an isomorphic application. It will render the app on the server, and serve the html content. We'll use [Express](http://expressjs.com) for that. We'll also use [nodemon](http://nodemon.io/) for starting the server in development. Continue by installing the dependencies.
 
 ```
 npm i --save express

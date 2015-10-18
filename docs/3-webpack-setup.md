@@ -20,7 +20,7 @@ const baseUrl = env.npm_package_config_appWebpackBaseUrl;
 
 let config = {
   entry: {
-    app: path.resolve('app/client.js')
+    app: path.resolve('app/index.js')
   },
   output: {
     path: path.resolve(`${buildPath}/${version}`),
@@ -81,4 +81,4 @@ The build command will create precompiled files which we don't want to store int
 echo public/assets >> .gitignore
 ```
 
-This configuration will produce the files `app.js` and `app.css`. You can run the development webpack server with the `npm run app:webpack:start` command and then access these files from `http://localhost:8080/{version}/app.{extension}`. To precompile assets for production, run the `npm run app:webpack:build` command.
+This configuration will produce the files `app.js` and `app.css`. You can run the development webpack server with the `npm run app:webpack:start` command and then access these files from `http://localhost:8080/{version}/app.{extension}` (Note that you will still get "module not found" errors until after the next step). To precompile assets for production, run the `npm run app:webpack:build` command.
