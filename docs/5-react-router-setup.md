@@ -3,7 +3,7 @@
 The [react-router](https://github.com/rackt/react-router) is usually one of the main building blocks of every React application. The Router has a powerful features and keeps your UI in sync with the URL. Let's start by install the dependencies.
 
 ```
-npm i --save react-router@1.0.0-rc1 history
+npm i --save react-router@1.0.0-rc3 history
 ```
 
 This example we enable switching between `/about` and `/contact` paths. Let's first create components for that.
