@@ -71,19 +71,18 @@ app.use(express.static(publicPath));
 
 app.use((req, res) => {
   let markup = ReactDomServer.renderToString(<App/>);
-  let html = [
-    `<!DOCTYPE html>`,
-    `<html>`,
-      `<head>`,
-        `<meta charset="utf-8"/>`,
-        `<link rel="stylesheet" href="${assetsPath}/app.css"></link>`,
-      `</head>`,
-      `<body>`,
-        `<div id="app">${markup}</div>`,
-      `</body>`,
-      `<script type="text/javascript" src="${assetsPath}/app.js"></script>`,
-    `</html>`
-  ].join('');
+  let html = `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="${assetsPath}/app.css"></link>
+      </head>
+      <body>
+        <div id="app">${markup}</div>
+      </body>
+      <script type="text/javascript" src="${assetsPath}/app.js"></script>
+    </html>`;
   res.setHeader('Content-Type', 'text/html');
   res.send(html);
 });
