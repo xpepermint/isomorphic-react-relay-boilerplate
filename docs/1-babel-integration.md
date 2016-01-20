@@ -15,4 +15,4 @@ Create the `.babelrc` file and paste the configuration below.
 }
 ```
 
-No you can run scripts by using the `babel-node` command.
+Now you can run scripts by using the `babel-node` command.
